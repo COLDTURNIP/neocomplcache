@@ -197,6 +197,8 @@ function! neocomplcache#enable() "{{{
         \'\h\w*\%(()\?\)\?')
   call neocomplcache#set_dictionary_helper(g:neocomplcache_keyword_patterns, 'zimbu',
         \'\h\w*\%(()\?\)\?')
+  call neocomplcache#set_dictionary_helper(g:neocomplcache_keyword_patterns, 'go',
+        \'\h\w*\%(()\?\)\?')
   "}}}
 
   " Initialize next keyword patterns."{{{
@@ -308,7 +310,7 @@ function! neocomplcache#enable() "{{{
         \['::'])
   call neocomplcache#set_dictionary_helper(g:neocomplcache_delimiter_patterns, 'php',
         \['\\', '::'])
-  call neocomplcache#set_dictionary_helper(g:neocomplcache_delimiter_patterns, 'java,d,javascript,actionscript,ruby,eruby,haskell,int-ghci,coffee,zimbu',
+  call neocomplcache#set_dictionary_helper(g:neocomplcache_delimiter_patterns, 'java,d,javascript,actionscript,ruby,eruby,haskell,int-ghci,coffee,zimbu,go',
         \['\.'])
   call neocomplcache#set_dictionary_helper(g:neocomplcache_delimiter_patterns, 'lua',
         \['\.', ':'])
