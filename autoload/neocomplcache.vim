@@ -1,7 +1,7 @@
 "=============================================================================
 " FILE: neocomplcache.vim
 " AUTHOR:  Shougo Matsushita <Shougo.Matsu@gmail.com>
-" Last Modified: 14 Nov 2010
+" Last Modified: 10 Dec 2010.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -22,7 +22,7 @@
 "     TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 "     SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 " }}}
-" Version: 5.3, for Vim 7.0
+" Version: 6.0, for Vim 7.0
 "=============================================================================
 
 " Check vimproc.
@@ -197,6 +197,8 @@ function! neocomplcache#enable() "{{{
         \'\h\w*\%(()\?\)\?')
   call neocomplcache#set_dictionary_helper(g:neocomplcache_keyword_patterns, 'zimbu',
         \'\h\w*\%(()\?\)\?')
+  call neocomplcache#set_dictionary_helper(g:neocomplcache_keyword_patterns, 'konoha',
+        \'[*$@%]\h\w*\|\h\w*\%(()\?\|!!\)\?')
   call neocomplcache#set_dictionary_helper(g:neocomplcache_keyword_patterns, 'go',
         \'\h\w*\%(()\?\)\?')
   "}}}
@@ -310,7 +312,7 @@ function! neocomplcache#enable() "{{{
         \['::'])
   call neocomplcache#set_dictionary_helper(g:neocomplcache_delimiter_patterns, 'php',
         \['\\', '::'])
-  call neocomplcache#set_dictionary_helper(g:neocomplcache_delimiter_patterns, 'java,d,javascript,actionscript,ruby,eruby,haskell,int-ghci,coffee,zimbu,go',
+  call neocomplcache#set_dictionary_helper(g:neocomplcache_delimiter_patterns, 'java,d,javascript,actionscript,ruby,eruby,haskell,int-ghci,coffee,zimbu,konoha,go',
         \['\.'])
   call neocomplcache#set_dictionary_helper(g:neocomplcache_delimiter_patterns, 'lua',
         \['\.', ':'])
